@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator</title>
+</head>
+<body>
+    <h1>My Calculator</h1>
+    <button onclick="calc()">Click to Calculate</button>
+
+    <script>
+        function calc() {
+           
+            var a = prompt("Enter first number");
+            a = Number(a);
+
+            var b = prompt("Enter second number");
+            b = Number(b);
+
+            var op = prompt("Enter operation: add, subtract, multiply, divide");
+
+            var res;
+
+            if (op == "add") {
+                res = a + b;
+            } else if (op == "subtract") {
+                res = a - b;
+            } else if (op == "multiply") {
+                res = a * b;
+            } else if (op == "divide") {
+                if (b == 0) {
+                    alert("Cannot divide by zero");
+                    return;
+                }
+                res = a / b;
+            } else {
+                alert("Invalid operation");
+                return;
+            }
+
+            alert("Result is " + res);
+        }
+    </script>
+</body>
+</html>
